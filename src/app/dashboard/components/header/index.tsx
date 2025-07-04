@@ -53,7 +53,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-4 font-medium text-sm sm:text-lg text-white">
           <Link href="/dashboard/category">Nova categoria</Link>
-          <Link href="/dashboard/menu">Cardápio</Link>
+          <Link href="/dashboard/product">Cardápio</Link>
           <form className="flex items-center">
             <button onClick={handleLogout} >
               <FiLogOut size={24} />
