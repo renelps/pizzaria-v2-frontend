@@ -4,8 +4,7 @@ import Link from "next/link";
 import { api } from "@/services/api";
 import { redirect } from "next/navigation";
 
-export default function Signup(){
-
+export default async function Signup(){
   async function handleRegister(formData: FormData){
     "use server"
 
@@ -22,7 +21,6 @@ export default function Signup(){
         email,
         password
       })
-
     }catch(err){
       console.log(err)
       return;
@@ -36,8 +34,8 @@ export default function Signup(){
   return (
     <main className="flex items-center justify-center h-screen">
       <div
-        className="w-full max-w-xl pb-20 px-10 md:px-18 flex items-center flex-col rounded-xl shadow-none md:shadow-[0_6px_25px_rgba(111,78,55,0.5)]">
-        <div>
+        className="w-full max-w-xl pb-20 px-10 md:px-18 flex items-center flex-col rounded-xl md:border border-slate-400 bg-[var(--dark-900)]">
+        <div className="mb-30">
           <Image
             src={logo}
             alt="logo"
@@ -57,7 +55,7 @@ export default function Signup(){
               type="text" 
               name="name"
               required
-              className="border-1 border-[#5D4037] py-3 px-2 rounded-sm outline-none" 
+              className="border-1 border-slate-400 py-3 px-2 rounded-sm outline-none" 
               placeholder="Digite seu Nome"
             />
 
@@ -65,20 +63,20 @@ export default function Signup(){
               type="email"
               name="email" 
               required
-              className="border-1 border-[#5D4037] py-3 px-2 rounded-sm outline-none"
+              className="border-1 border-slate-400 py-3 px-2 rounded-sm outline-none"
               placeholder="Digite seu Email"
             />
             <input 
               type="password" 
               name="password"
               required
-              className="border-1 border-[#5D4037] py-3 px-2 rounded-sm outline-none" 
+              className="border-1 border-slate-400 py-3 px-2 rounded-sm outline-none" 
               placeholder="Digite sua Senha"
             />
 
             <button 
               type="submit" 
-              className="mt-10 border-1 border-[#5D4037] py-3 hover:border-slate-600 duration-300"
+              className="mt-10 border-1 border-slate-400 py-3 hover:border-slate-600 duration-300"
             >
               Acessar
             </button>

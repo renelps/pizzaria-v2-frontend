@@ -4,7 +4,8 @@ import Link from "next/link";
 import { api } from "@/services/api";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-export default function Home(){
+
+export default async function Home(){
 
   async function handleLogin(formData: FormData){
     "use server"
@@ -46,8 +47,8 @@ export default function Home(){
   return (
     <main className="flex items-center justify-center h-screen">
       <div
-        className="w-full max-w-xl pb-20 px-10 md:px-18 shadow-none md:shadow-[0_6px_25px_rgba(111,78,55,0.5)] flex items-center flex-col rounded-xl">
-        <div>
+        className="w-full max-w-xl pb-20 px-10 bg-[var(--dark-900)] md:px-18 md:border border-slate-400 flex items-center flex-col rounded-xl">
+        <div className="mb-30">
           <Image
             src={logo}
             alt="logo"
@@ -66,20 +67,20 @@ export default function Home(){
               type="email"
               name="email" 
               required
-              className="border-1 border-[#5D4037] py-3 px-2 rounded-sm outline-none"
+              className="border-1 border-slate-400 py-3 px-2 rounded-sm outline-none"
               placeholder="Digite seu email"
             />
             <input 
               type="password" 
               name="password"
               required
-              className="border-1 border-[#5D4037] py-3 px-2 rounded-sm outline-none" 
+              className="border-1 border-slate-400 py-3 px-2 rounded-sm outline-none" 
               placeholder="Digite sua senha"
             />
 
             <button 
               type="submit" 
-              className="mt-10 border-1 border-[#5D4037] py-3 hover:border-slate-600 duration-300"
+              className="mt-10 border border-slate-400 py-3 hover:border-slate-600 duration-300 rounded-md"
             >
               Acessar
             </button>
