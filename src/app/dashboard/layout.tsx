@@ -1,3 +1,4 @@
+import OrderModalProvider from "@/context";
 import { Header } from "./components/header";
 
 
@@ -6,8 +7,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   return (
     <>
-      <Header />
-      {children}
+      <OrderModalProvider>
+        <Header />
+        {children}
+      </OrderModalProvider>
     </>
   )
 }
