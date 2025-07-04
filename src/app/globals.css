@@ -14,11 +14,12 @@
 body {
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
-  @apply bg-no-repeat bg-cover bg-center bg-fixed;
-  background-image: url('/bg.png');
+  background: var(--dark-700);
+  /* @apply bg-no-repeat bg-cover bg-center bg-fixed;
+  background-image: url('/bg.png'); */
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   body {
     background: var(--dark-700)
   }
@@ -28,10 +29,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
+*/
 
 button {
   cursor: pointer;
-}
+  
+} 
