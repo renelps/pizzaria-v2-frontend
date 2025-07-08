@@ -10,7 +10,6 @@ Este repositório contém o **painel administrativo** da Pizzaria Oliveira, dese
 - **Axios**
 - **JWT (via cookies)**
 - **Context API**
-- **React Hook Form + Zod**
 
 ## 🎯 Funcionalidades
 
